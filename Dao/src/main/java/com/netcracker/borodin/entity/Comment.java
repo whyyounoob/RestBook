@@ -15,23 +15,21 @@ import java.util.Date;
 @Entity
 @Table(name = "comments")
 public class Comment {
-    @Id
-    @Column(name = "comment_id", unique = true)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @Column(name = "comment_id", unique = true)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Column(name = "text")
-    private String text;
+  @Column(name = "text")
+  private String text;
 
-    @Column(name = "create_date")
-    private Date createDate;
+  @Column(name = "create_date")
+  private Date createDate;
 
-    @Column(name = "modify_date")
-    private Date modifyDate;
+  @Column(name = "modify_date")
+  private Date modifyDate;
 
-    @ManyToOne
-    private Book book;
+  @ManyToOne private Book book;
 
-    @ManyToOne
-    private User user;
+  @ManyToOne private User user;
 }

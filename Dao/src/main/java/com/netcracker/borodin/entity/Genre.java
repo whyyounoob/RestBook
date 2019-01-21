@@ -15,12 +15,11 @@ import javax.persistence.*;
 @Table(name = "genres")
 public class Genre {
 
-    @Id
-    @Column(name = "genre_id", unique = true)
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @Column(name = "genre_id", unique = true)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Column(name = "name", unique = true)
-    private String name;
-
+  @Column(name = "name", unique = true)
+  private String name;
 }

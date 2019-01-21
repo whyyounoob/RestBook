@@ -1,24 +1,28 @@
 package com.netcracker.borodin.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class BookDTO {
 
-    private long id;
+    private Long id;
 
     private String title;
 
     private int year;
 
-    private double averageRate;
+    private Double averageRate;
 
-    private String authors;
+    private List<AuthorDTO> authors;
 
-    private String genres;
-
-    private int rateByCurrentUser = -1;
+    private List<GenreDTO> genres;
 
 }
